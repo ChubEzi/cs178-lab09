@@ -53,9 +53,11 @@ def print_all_movies():
 def get_movie_by_title():
     movieName = get_movie_by_title
 
-    get_movie_by_title = input("Please enter a movie title")
+    get_movie_by_title = input("Please enter a movie title: ")
 
-    userResponse = movieName.scan()
+    userResponse = movieName.scan(
+        FilterExpression = Attr('title').eq(get_movie_by_title)
+    )
     titleItems = userResponse.get("Items", [])
     if not items:
         print("No movies found. Make sure your DynamoDB table has data.")
