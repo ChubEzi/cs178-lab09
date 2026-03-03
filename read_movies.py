@@ -50,6 +50,21 @@ def print_all_movies():
     for movie in items:
         print_movie(movie)
 
+def get_movie_by_title():
+    movieName = get_movie_by_title
+
+    get_movie_by_title = input("Please enter a movie title")
+
+    userResponse = movieName.scan()
+    titleItems = userResponse.get("Items", [])
+    if not items:
+        print("No movies found. Make sure your DynamoDB table has data.")
+        return
+    
+    print(f"Found {len(items)} movie(s):\n")
+    for movie in items:
+        print_movie(movie)
+
 
 def main():
     print("===== Reading from DynamoDB =====\n")
