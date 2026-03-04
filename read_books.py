@@ -1,5 +1,5 @@
-# read_movies.py
-# Reads all items from the DynamoDB Movies table and prints them.
+# read_boooks.py
+# Reads all items from the DynamoDB Books table and prints them.
 # Part of Lab 09 — feature/read-dynamo branch
 
 import boto3
@@ -46,8 +46,8 @@ def print_all_book():
         return
     
     print(f"Found {len(items)} book(s):\n")
-    for movie in items:
-        print_movie(movie)
+    for book in items:
+        print_book(book)
 
 
 def main():
