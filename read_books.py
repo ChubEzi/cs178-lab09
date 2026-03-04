@@ -52,7 +52,7 @@ def print_all_book():
 
 def main():
     print("===== Reading from DynamoDB =====\n")
-    print_all_Books()
+    print_all_book()
 
 
 if __name__ == "__main__":
